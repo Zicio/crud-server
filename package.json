@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "server.js",
+  "scripts": {
+    "start": "forever server.js",
+    "watch": "forever -w server.js",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zicio/crud-server.git"
+  },
+  "author": "Zicio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zicio/crud-server/issues"
+  },
+  "homepage": "https://github.com/Zicio/crud-server#readme",
+  "dependencies": {
+    "@faker-js/faker": "^6.3.1",
+    "@koa/cors": "^3.3.0",
+    "@koa/router": "^10.1.1",
+    "forever": "^4.0.3",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "uuid": "^8.3.2"
+  }
+}
