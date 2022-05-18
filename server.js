@@ -38,14 +38,13 @@ router.post("/notes", async (ctx, next) => {
   ctx.response.status = 204;
 });
 
-// router.delete("/notes/:id", async (ctx, next) => {
-//   const noteId = Number(ctx.params.id);
-//   const index = notes.findIndex((o) => o.id === noteId);
-//   if (index !== -1) {
-//     notes.splice(index, 1);
-//   }
-//   ctx.response.status = 204;
-// });
+router.delete("/notes", async (ctx, next) => {
+  const index = cards.findIndex((o) => o.id === ctx.request.query.id);
+  if (index !== -1) {
+    cards.splice(index, 1);
+  }
+  ctx.response.status = 204;
+});
 
 app.use(router.routes()).use(router.allowedMethods());
 const port = process.env.PORT || 7777;
